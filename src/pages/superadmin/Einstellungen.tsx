@@ -181,7 +181,7 @@ export default function Einstellungen() {
               <div className="flex items-center gap-3">
                 <div
                   className="h-9 w-9 rounded-md border border-border"
-                  style={{ background: form.accent_color ?? "#7bed9f" }}
+                  style={{ background: form.accent_color ?? "#c4634a" }}
                 />
                 <Input
                   value={form.accent_color ?? ""}
@@ -683,7 +683,7 @@ export default function Einstellungen() {
                     name: form.company_name ?? "Sekretariat-Service",
                     address: form.company_address,
                     logoText: form.logo_text ?? form.company_name ?? "Sekretariat-Service",
-                    accent: form.accent_color ?? "#7bed9f",
+                    accent: form.accent_color ?? "#c4634a",
                   },
                 })}
               />
@@ -725,7 +725,7 @@ export default function Einstellungen() {
                     name: form.company_name ?? "Sekretariat-Service",
                     address: form.company_address,
                     logoText: form.logo_text ?? form.company_name ?? "Sekretariat-Service",
-                    accent: form.accent_color ?? "#7bed9f",
+                    accent: form.accent_color ?? "#c4634a",
                   },
                   cta: { label: "Termin auswählen", url: previewVars.booking_url },
                   steps: [
@@ -774,7 +774,7 @@ export default function Einstellungen() {
                     name: form.company_name ?? "Sekretariat-Service",
                     address: form.company_address,
                     logoText: form.logo_text ?? form.company_name ?? "Sekretariat-Service",
-                    accent: form.accent_color ?? "#7bed9f",
+                    accent: form.accent_color ?? "#c4634a",
                   },
                   infoCard: {
                     label: "Ihr Termin",
@@ -831,7 +831,7 @@ export default function Einstellungen() {
                     name: form.company_name ?? "Sekretariat-Service",
                     address: form.company_address,
                     logoText: form.logo_text ?? form.company_name ?? "Sekretariat-Service",
-                    accent: form.accent_color ?? "#7bed9f",
+                    accent: form.accent_color ?? "#c4634a",
                   },
                   infoCard: {
                     label: "Deine Zugangsdaten",

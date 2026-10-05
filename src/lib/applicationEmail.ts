@@ -9,7 +9,7 @@ export type ApplicationEmailInput = {
     name: string;
     address?: string | null;
     logoText?: string | null; // e.g. "Sekretariat-Service"
-    accent?: string | null; // hex like #7bed9f
+    accent?: string | null; // hex like #c4634a
   };
   cta?: { label: string; url: string } | null;
   steps?: Array<{ title: string; body: string }> | null;
@@ -63,8 +63,8 @@ function splitLogo(logoText: string) {
 }
 
 export function renderApplicationEmailHtml(input: ApplicationEmailInput) {
-  const accent = input.company.accent || "#7bed9f";
-  const accentDark = "#2fa363";
+  const accent = input.company.accent || "#c4634a";
+  const accentDark = "#a3503c";
   const accentTintSoft = "#f0fbf4";
   const accentTint = "#f4fbf6";
   const accentBorder = "#d9f2e2";

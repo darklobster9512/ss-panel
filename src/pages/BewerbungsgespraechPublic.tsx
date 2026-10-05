@@ -79,7 +79,7 @@ export default function BewerbungsgespraechPublic() {
     load();
   }, [token]);
 
-  const accent = config?.accent_color || "#7bed9f";
+  const accent = config?.accent_color || "#c4634a";
   const logoText = config?.logo_text || config?.company_name || "Sekretariat-Service";
   const { head, tail } = splitLogo(logoText);
   const companyName = config?.company_name || "Sekretariat-Service";
@@ -153,10 +153,10 @@ export default function BewerbungsgespraechPublic() {
   }
 
   return (
-    <div className="min-h-screen bg-[#f5f7f5] px-4 py-10">
+    <div className="min-h-screen bg-[#fbf6ef] px-4 py-10">
       <div className="mx-auto w-full max-w-2xl">
-        <div className="overflow-hidden rounded-2xl border border-[#eaeee9] bg-white shadow-[0_8px_32px_-8px_rgba(16,24,20,0.12)]">
-          <div className="bg-[#130f40] px-8 py-8 text-center">
+        <div className="overflow-hidden rounded-2xl border border-[#e9dcc9] bg-white shadow-[0_8px_32px_-8px_rgba(46,38,32,0.12)]">
+          <div className="bg-[#2e2620] px-8 py-8 text-center">
             <div className="text-2xl font-bold tracking-tight text-white">
               {head}
               <span style={{ color: accent }}>{tail}</span>
@@ -183,7 +183,7 @@ export default function BewerbungsgespraechPublic() {
                   className="mx-auto grid h-14 w-14 place-items-center rounded-2xl"
                   style={{ background: `${accent}22` }}
                 >
-                  <CheckCircle2 className="h-7 w-7" style={{ color: "#2fa363" }} />
+                  <CheckCircle2 className="h-7 w-7" style={{ color: accent }} />
                 </div>
                 <div>
                   <div className="text-xl font-semibold">Termin bestätigt</div>
@@ -192,7 +192,7 @@ export default function BewerbungsgespraechPublic() {
                   </div>
                 </div>
                 <div
-                  className="mx-auto max-w-sm rounded-xl border-l-4 bg-[#f5f7f5] px-4 py-3 text-left"
+                  className="mx-auto max-w-sm rounded-xl border-l-4 bg-[#fbf6ef] px-4 py-3 text-left"
                   style={{ borderLeftColor: accent }}
                 >
                   <div className="flex items-center gap-2">

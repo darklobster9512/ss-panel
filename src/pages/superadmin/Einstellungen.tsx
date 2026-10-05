@@ -181,7 +181,7 @@ export default function Einstellungen() {
               <div className="flex items-center gap-3">
                 <div
                   className="h-9 w-9 rounded-md border border-border"
-                  style={{ background: form.accent_color ?? "#7bed9f" }}
+                  style={{ background: form.accent_color ?? "#c4634a" }}
                 />
                 <Input
                   value={form.accent_color ?? ""}
@@ -670,11 +670,11 @@ export default function Einstellungen() {
                 </div>
               </div>
             </div>
-            <div className="rounded-lg overflow-hidden border border-border bg-[#f5f7f5]">
+            <div className="rounded-lg overflow-hidden border border-border bg-[#fbf6ef]">
               <iframe
                 title="E-Mail Vorschau"
                 sandbox=""
-                style={{ width: "100%", height: 560, border: 0, background: "#f5f7f5" }}
+                style={{ width: "100%", height: 560, border: 0, background: "#fbf6ef" }}
                 srcDoc={renderApplicationEmailHtml({
                   subject: renderTpl(form.application_email_subject ?? "Deine Bewerbung", previewVars),
                   bodyText: form.application_email_body ?? "",
@@ -683,7 +683,7 @@ export default function Einstellungen() {
                     name: form.company_name ?? "Sekretariat-Service",
                     address: form.company_address,
                     logoText: form.logo_text ?? form.company_name ?? "Sekretariat-Service",
-                    accent: form.accent_color ?? "#7bed9f",
+                    accent: form.accent_color ?? "#c4634a",
                   },
                 })}
               />
@@ -712,11 +712,11 @@ export default function Einstellungen() {
                 </div>
               </div>
             </div>
-            <div className="rounded-lg overflow-hidden border border-border bg-[#f5f7f5]">
+            <div className="rounded-lg overflow-hidden border border-border bg-[#fbf6ef]">
               <iframe
                 title="Interview E-Mail Vorschau"
                 sandbox=""
-                style={{ width: "100%", height: 560, border: 0, background: "#f5f7f5" }}
+                style={{ width: "100%", height: 560, border: 0, background: "#fbf6ef" }}
                 srcDoc={renderApplicationEmailHtml({
                   subject: renderTpl(form.interview_email_subject ?? "Bewerbungsgespräch", previewVars),
                   bodyText: form.interview_email_body ?? "",
@@ -725,7 +725,7 @@ export default function Einstellungen() {
                     name: form.company_name ?? "Sekretariat-Service",
                     address: form.company_address,
                     logoText: form.logo_text ?? form.company_name ?? "Sekretariat-Service",
-                    accent: form.accent_color ?? "#7bed9f",
+                    accent: form.accent_color ?? "#c4634a",
                   },
                   cta: { label: "Termin auswählen", url: previewVars.booking_url },
                   steps: [
@@ -761,11 +761,11 @@ export default function Einstellungen() {
                 </div>
               </div>
             </div>
-            <div className="rounded-lg overflow-hidden border border-border bg-[#f5f7f5]">
+            <div className="rounded-lg overflow-hidden border border-border bg-[#fbf6ef]">
               <iframe
                 title="Terminbestätigung Vorschau"
                 sandbox=""
-                style={{ width: "100%", height: 560, border: 0, background: "#f5f7f5" }}
+                style={{ width: "100%", height: 560, border: 0, background: "#fbf6ef" }}
                 srcDoc={renderApplicationEmailHtml({
                   subject: renderTpl(form.confirmation_email_subject ?? "Ihr Termin ist bestätigt", previewVars),
                   bodyText: form.confirmation_email_body ?? "",
@@ -774,7 +774,7 @@ export default function Einstellungen() {
                     name: form.company_name ?? "Sekretariat-Service",
                     address: form.company_address,
                     logoText: form.logo_text ?? form.company_name ?? "Sekretariat-Service",
-                    accent: form.accent_color ?? "#7bed9f",
+                    accent: form.accent_color ?? "#c4634a",
                   },
                   infoCard: {
                     label: "Ihr Termin",
@@ -815,11 +815,11 @@ export default function Einstellungen() {
                 </div>
               </div>
             </div>
-            <div className="rounded-lg overflow-hidden border border-border bg-[#f5f7f5]">
+            <div className="rounded-lg overflow-hidden border border-border bg-[#fbf6ef]">
               <iframe
                 title="Zugangsdaten E-Mail Vorschau"
                 sandbox=""
-                style={{ width: "100%", height: 560, border: 0, background: "#f5f7f5" }}
+                style={{ width: "100%", height: 560, border: 0, background: "#fbf6ef" }}
                 srcDoc={renderApplicationEmailHtml({
                   subject: renderTpl(
                     form.welcome_email_subject ?? "Deine Zugangsdaten für dein Mitarbeiterkonto",
@@ -831,7 +831,7 @@ export default function Einstellungen() {
                     name: form.company_name ?? "Sekretariat-Service",
                     address: form.company_address,
                     logoText: form.logo_text ?? form.company_name ?? "Sekretariat-Service",
-                    accent: form.accent_color ?? "#7bed9f",
+                    accent: form.accent_color ?? "#c4634a",
                   },
                   infoCard: {
                     label: "Deine Zugangsdaten",

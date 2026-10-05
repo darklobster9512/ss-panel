@@ -78,7 +78,7 @@ function StatusCell({
 }) {
   const cls =
     state === "ok"
-      ? "text-emerald-500"
+      ? "text-primary"
       : state === "pending"
         ? "text-amber-500"
         : "text-destructive";

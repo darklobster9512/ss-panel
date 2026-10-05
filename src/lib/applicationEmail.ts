@@ -9,7 +9,7 @@ export type ApplicationEmailInput = {
     name: string;
     address?: string | null;
     logoText?: string | null; // e.g. "Sekretariat-Service"
-    accent?: string | null; // hex like #7bed9f
+    accent?: string | null; // hex like #c4634a
   };
   cta?: { label: string; url: string } | null;
   steps?: Array<{ title: string; body: string }> | null;
@@ -63,8 +63,8 @@ function splitLogo(logoText: string) {
 }
 
 export function renderApplicationEmailHtml(input: ApplicationEmailInput) {
-  const accent = input.company.accent || "#7bed9f";
-  const accentDark = "#2fa363";
+  const accent = input.company.accent || "#c4634a";
+  const accentDark = "#a3503c";
   const accentTintSoft = "#f0fbf4";
   const accentTint = "#f4fbf6";
   const accentBorder = "#d9f2e2";
@@ -103,15 +103,15 @@ export function renderApplicationEmailHtml(input: ApplicationEmailInput) {
     <meta name="supported-color-schemes" content="light" />
     <title>${escapeHtml(subject)}</title>
   </head>
-  <body style="margin:0;padding:0;background:#f5f7f5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <body style="margin:0;padding:0;background:#fbf6ef;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
     <div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">${preheader}</div>
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f5f7f5;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#fbf6ef;">
       <tr>
         <td align="center" style="padding:40px 16px;">
           <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;">
             <tr>
-              <td style="background:#ffffff;border-radius:14px;box-shadow:0 1px 2px rgba(16,24,20,0.04),0 8px 24px rgba(16,24,20,0.06);overflow:hidden;border:1px solid #eaeee9;">
-                <div style="padding:32px 32px;background:#130f40;text-align:center;">
+              <td style="background:#ffffff;border-radius:14px;box-shadow:0 1px 2px rgba(46,38,32,0.04),0 8px 24px rgba(46,38,32,0.06);overflow:hidden;border:1px solid #e9dcc9;">
+                <div style="padding:32px 32px;background:#2e2620;text-align:center;">
                   <div style="font-size:22px;font-weight:700;letter-spacing:-0.01em;color:#ffffff;">
                     ${escapeHtml(head)}<span style="color:${accent};">${escapeHtml(tail)}</span>
                   </div>

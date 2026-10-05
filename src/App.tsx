@@ -30,8 +30,6 @@ const ShortRedirect = lazy(() => import("./pages/ShortRedirect"));
 
 import SuperadminVertraege from "./pages/superadmin/Vertraege";
 import SuperadminVertragsvorlageEditor from "./pages/superadmin/VertragsvorlageEditor";
-import SuperadminAuszahlungen from "./pages/superadmin/Auszahlungen";
-import SuperadminAbrechnung from "./pages/superadmin/Abrechnung";
 import SuperadminEinstellungen from "./pages/superadmin/Einstellungen";
 import SuperadminTelegram from "./pages/superadmin/Telegram";
 import SuperadminManager from "./pages/superadmin/Manager";
@@ -109,8 +107,6 @@ export default function App() {
                     <Route path="vertraege/:templateId" element={<SuperadminVertragsvorlageEditor />} />
                     <Route path="arbeitsvertraege" element={<SuperadminArbeitsvertraege />} />
                     <Route path="arbeitsvertraege/:id" element={<SuperadminArbeitsvertragDetail />} />
-                    <Route path="auszahlungen" element={<SuperadminAuszahlungen />} />
-                    <Route path="abrechnung" element={<SuperadminAbrechnung />} />
                     
                     <Route path="einstellungen" element={<SuperadminEinstellungen />} />
 

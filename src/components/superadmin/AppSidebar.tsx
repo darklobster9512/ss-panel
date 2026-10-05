@@ -97,8 +97,6 @@ const finItems = (pendingCount: number): SidebarItem[] => [
     icon: FileSignature,
     badge: pendingCount,
   },
-  { title: "Auszahlungen", url: "/superadmin/auszahlungen", icon: Wallet },
-  { title: "Abrechnung", url: "/superadmin/abrechnung", icon: Receipt },
 ];
 
 const chatItems = (unread: number): SidebarItem[] => [

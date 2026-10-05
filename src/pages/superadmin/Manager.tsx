@@ -213,7 +213,7 @@ export default function Manager() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="manager@sekretariat24.app"
+                placeholder="manager@sekretariat-service.de"
               />
             </div>
             <div className="space-y-2">

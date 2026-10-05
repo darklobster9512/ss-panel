@@ -70,9 +70,8 @@ function BrandingPanel() {
 
       <div className="relative">
         <Link to="/" className="inline-flex items-center gap-2 text-on-ink">
-          <img src="/logo-icon.png" alt="Sekretariat-Service" className="h-9 w-9 rounded-xl" />
-          <span className="text-lg font-semibold tracking-tight">
-            Sekretariat<span className="text-primary">-Service</span>
+          <span className="text-lg font-semibold tracking-tight text-on-ink">
+            Sekretariat-Service
           </span>
         </Link>
 
@@ -140,7 +139,7 @@ function FeatureRow() {
 function HomepageCard() {
   return (
     <a
-      href="https://web.sekretariat24.app"
+      href="https://sekretariat-service.de"
       target="_blank"
       rel="noopener noreferrer"
       className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur transition-colors hover:border-primary/50 hover:bg-white/10"
@@ -153,7 +152,7 @@ function HomepageCard() {
           Unsere Startseite
         </span>
         <span className="block truncate text-xs text-white/60">
-          web.sekretariat24.app – mehr über Sekretariat-Service erfahren
+          sekretariat-service.de – mehr über Sekretariat-Service erfahren
         </span>
       </span>
       <ArrowUpRight className="h-4 w-4 shrink-0 text-white/50 transition-colors group-hover:text-primary" />
@@ -254,10 +253,10 @@ function LoginForm() {
       <p className="text-center text-xs text-muted-foreground">
         Probleme beim Anmelden?{" "}
         <a
-          href="mailto:info@sekretariat24.app"
+          href="mailto:info@sekretariat-service.de"
           className="font-medium text-primary hover:underline"
         >
-          info@sekretariat24.app
+          info@sekretariat-service.de
         </a>
       </p>
     </form>

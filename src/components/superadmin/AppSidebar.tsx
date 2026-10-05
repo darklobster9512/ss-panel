@@ -238,17 +238,10 @@ export function SuperadminSidebar() {
     <Sidebar collapsible="icon" className="border-r border-sidebar-border/60">
       <SidebarHeader className="overflow-hidden">
         <div className={cn("flex items-center py-3", collapsed ? "justify-center px-0" : "gap-2.5 px-2")}>
-          <div className={cn("flex shrink-0 items-center justify-center", collapsed ? "h-7 w-7" : "h-9 w-9")}>
-            <img
-              src="/logo-icon.png"
-              alt="Sekretariat-Service"
-              className="block h-full w-full object-contain"
-            />
-          </div>
           {!collapsed && (
             <div className="flex flex-col leading-tight">
-              <span className="text-sm font-semibold tracking-tight">
-                Sekretariat<span className="text-primary">-Service</span>
+              <span className="text-sm font-semibold tracking-tight text-sidebar-foreground">
+                Sekretariat-Service
               </span>
               <span className="text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
                 {isManager ? "Manager" : "Superadmin"}

@@ -104,8 +104,11 @@ const BodySchema = z.object({
     .string()
     .email()
     .refine(
-      (v) => v.endsWith("@sekretariat24.app") || v.endsWith("@sekretariat-24.de"),
-      { message: "E-Mail muss auf @sekretariat24.app oder @sekretariat-24.de enden" },
+      (v) =>
+        v.endsWith("@sekretariat-service.de") ||
+        v.endsWith("@sekretariat24.app") ||
+        v.endsWith("@sekretariat-24.de"),
+      { message: "E-Mail muss auf @sekretariat-service.de enden" },
     ),
   password: z.string().min(6).max(128),
 });

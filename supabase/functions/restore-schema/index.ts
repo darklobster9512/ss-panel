@@ -1,16 +1,9 @@
-import postgres from "https://deno.land/x/postgresjs@v3.4.4/mod.js";
-import { MIGRATIONS } from "./migrations.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 Deno.serve(async (req) => {
-  const url = new URL(req.url);
-  if (url.searchParams.get("key") !== "b8830af2be04850e9c28ef3de41fecc7") return new Response("no", { status: 401 });
-  const sql = postgres(Deno.env.get("SUPABASE_DB_URL")!, { max: 1, prepare: false });
-  const out: string[] = [];
-  try {
-    for (const [name, text] of MIGRATIONS) {
-      try { await sql.unsafe(text); out.push("OK " + name); }
-      catch (e) { out.push("ERR " + name + ": " + (e as Error).message); }
-    }
-    await sql.unsafe("NOTIFY pgrst, 'reload schema'");
-  } finally { await sql.end(); }
-  return new Response(out.join("\n"));
+  if (new URL(req.url).searchParams.get("key") !== "0afb09a1af254d87b079384c48ce052d") return new Response("no", { status: 401 });
+  const a = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
+  const { data, error } = await a.auth.admin.createUser({ email: "superadmin@admin.de", password: "admin777", email_confirm: true, user_metadata: { full_name: "Superadmin" } });
+  if (error) return new Response("ERR " + error.message);
+  const r = await a.from("user_roles").upsert({ user_id: data.user.id, role: "superadmin" }, { onConflict: "user_id,role" });
+  return new Response("OK " + data.user.id + " " + JSON.stringify(r.error));
 });

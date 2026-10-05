@@ -52,7 +52,7 @@ function renderConfirmationEmailHtml(input: ConfirmationInput) {
   const accentTint = '#f4fbf6';
   const accentBorder = '#d9f2e2';
   const paragraphs = textToParagraphs(renderTemplate(input.bodyText, input.vars));
-  const logoText = input.company.logoText || input.company.name || 'Sekretariat24';
+  const logoText = input.company.logoText || input.company.name || 'Sekretariat-Service';
   const { head, tail } = splitLogo(logoText);
   const companyName = escapeHtml(input.company.name || logoText);
   const address = input.company.address ? escapeHtml(input.company.address).replace(/\n/g, ' · ') : '';
@@ -229,9 +229,9 @@ Deno.serve(async (req) => {
             lines: [`${weekday}, ${date}`, `${time} Uhr`],
           },
           company: {
-            name: settings.company_name ?? 'Sekretariat24',
+            name: settings.company_name ?? 'Sekretariat-Service',
             address: settings.company_address,
-            logoText: settings.logo_text ?? settings.company_name ?? 'Sekretariat24',
+            logoText: settings.logo_text ?? settings.company_name ?? 'Sekretariat-Service',
             accent: settings.accent_color ?? '#7bed9f',
           },
         });
@@ -274,7 +274,7 @@ Deno.serve(async (req) => {
         const message = renderSmsTemplate(tpl, {
           vorname: app.vorname ?? '',
           nachname: app.nachname ?? '',
-          unternehmen: smsSettings?.company_name ?? 'Sekretariat24',
+          unternehmen: smsSettings?.company_name ?? 'Sekretariat-Service',
           datum: formatDateDeShort(String(appt.appointment_date)),
           uhrzeit: String(appt.appointment_time ?? '').slice(0, 5),
         });

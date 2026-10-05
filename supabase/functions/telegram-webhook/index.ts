@@ -99,7 +99,7 @@ Deno.serve(async (req) => {
       botToken,
       chatId,
       [
-        '👋 <b>Sekretariat24 Bot</b>',
+        '👋 <b>Sekretariat-Service Bot</b>',
         DIVIDER,
         `Deine Chat-ID: <code>${chatId}</code>`,
         '',

@@ -65,9 +65,9 @@ async function sendWelcomeEmail(
     bodyText,
     vars,
     company: {
-      name: settings.company_name ?? "Sekretariat24",
+      name: settings.company_name ?? "Sekretariat-Service",
       address: settings.company_address,
-      logoText: settings.logo_text ?? settings.company_name ?? "Sekretariat24",
+      logoText: settings.logo_text ?? settings.company_name ?? "Sekretariat-Service",
       accent: settings.accent_color ?? "#7bed9f",
     },
     infoCard: {

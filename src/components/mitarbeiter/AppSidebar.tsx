@@ -137,14 +137,14 @@ export function MitarbeiterSidebar() {
           <div className={cn("flex shrink-0 items-center justify-center", collapsed ? "h-7 w-7" : "h-9 w-9")}>
             <img
               src="/logo-icon.png"
-              alt="Sekretariat24"
+              alt="Sekretariat-Service"
               className="block h-full w-full object-contain"
             />
           </div>
           {!collapsed && (
             <div className="flex flex-col leading-tight">
               <span className="text-sm font-semibold tracking-tight">
-                Sekretariat<span className="text-primary">24</span>
+                Sekretariat<span className="text-primary">-Service</span>
               </span>
               <span className="text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
                 Mitarbeiter

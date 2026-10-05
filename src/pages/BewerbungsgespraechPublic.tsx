@@ -80,9 +80,9 @@ export default function BewerbungsgespraechPublic() {
   }, [token]);
 
   const accent = config?.accent_color || "#7bed9f";
-  const logoText = config?.logo_text || config?.company_name || "Sekretariat24";
+  const logoText = config?.logo_text || config?.company_name || "Sekretariat-Service";
   const { head, tail } = splitLogo(logoText);
-  const companyName = config?.company_name || "Sekretariat24";
+  const companyName = config?.company_name || "Sekretariat-Service";
 
   const timeSlots = useMemo(() => {
     if (!config) return [];

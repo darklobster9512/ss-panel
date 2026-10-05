@@ -61,18 +61,18 @@ function BrandingPanel() {
       <div className="pointer-events-none absolute inset-0 bg-dots opacity-30" />
       <div
         className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full blur-3xl"
-        style={{ backgroundColor: "rgba(123, 237, 159, 0.35)" }}
+        style={{ backgroundColor: "rgba(196, 99, 74, 0.35)" }}
       />
       <div
         className="pointer-events-none absolute -bottom-24 -left-24 h-80 w-80 rounded-full blur-3xl"
-        style={{ backgroundColor: "rgba(123, 237, 159, 0.20)" }}
+        style={{ backgroundColor: "rgba(196, 99, 74, 0.20)" }}
       />
 
       <div className="relative">
         <Link to="/" className="inline-flex items-center gap-2 text-on-ink">
-          <img src="/logo-icon.png" alt="Sekretariat24" className="h-9 w-9 rounded-xl" />
+          <img src="/logo-icon.png" alt="Sekretariat-Service" className="h-9 w-9 rounded-xl" />
           <span className="text-lg font-semibold tracking-tight">
-            Sekretariat<span className="text-primary">24</span>
+            Sekretariat<span className="text-primary">-Service</span>
           </span>
         </Link>
 
@@ -153,7 +153,7 @@ function HomepageCard() {
           Unsere Startseite
         </span>
         <span className="block truncate text-xs text-white/60">
-          web.sekretariat24.app – mehr über Sekretariat24 erfahren
+          web.sekretariat24.app – mehr über Sekretariat-Service erfahren
         </span>
       </span>
       <ArrowUpRight className="h-4 w-4 shrink-0 text-white/50 transition-colors group-hover:text-primary" />

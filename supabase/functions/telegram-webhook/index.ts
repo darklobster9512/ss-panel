@@ -1,7 +1,7 @@
 import { createClient } from 'npm:@supabase/supabase-js@2';
 
 const TELEGRAM_API = 'https://api.telegram.org';
-const PORTAL = 'https://sekretariat24.app';
+const PORTAL = 'https://sekretariat-service.de';
 
 function esc(v: unknown) {
   return String(v ?? '')
@@ -99,7 +99,7 @@ Deno.serve(async (req) => {
       botToken,
       chatId,
       [
-        '👋 <b>Sekretariat24 Bot</b>',
+        '👋 <b>Sekretariat-Service Bot</b>',
         DIVIDER,
         `Deine Chat-ID: <code>${chatId}</code>`,
         '',

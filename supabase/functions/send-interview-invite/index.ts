@@ -52,7 +52,7 @@ function renderInterviewEmailHtml(input: EmailInput) {
   const accentTint = '#f4fbf6';
   const accentBorder = '#d9f2e2';
   const paragraphs = textToParagraphs(renderTemplate(input.bodyText, input.vars));
-  const logoText = input.company.logoText || input.company.name || 'Sekretariat24';
+  const logoText = input.company.logoText || input.company.name || 'Sekretariat-Service';
   const { head, tail } = splitLogo(logoText);
   const companyName = escapeHtml(input.company.name || logoText);
   const address = input.company.address ? escapeHtml(input.company.address).replace(/\n/g, ' · ') : '';
@@ -213,7 +213,7 @@ Deno.serve(async (req) => {
       .limit(1)
       .maybeSingle();
 
-    const bookingUrl = `https://sekretariat24.app/bewerbungsgespraech/${token}`;
+    const bookingUrl = `https://sekretariat-service.de/bewerbungsgespraech/${token}`;
 
     // --- SMS via seven.io (independent of the email) ---
     async function trySendSms(): Promise<{ ok: boolean; skipped?: string; error?: string }> {
@@ -231,7 +231,7 @@ Deno.serve(async (req) => {
           break;
         }
       }
-      const link = targetOk ? `https://sekretariat24.app/r/${code}` : bookingUrl;
+      const link = targetOk ? `https://sekretariat-service.de/r/${code}` : bookingUrl;
 
       const tpl =
         settings.sms_interview_text ??
@@ -239,7 +239,7 @@ Deno.serve(async (req) => {
       const message = renderSmsTemplate(tpl, {
         vorname: app.vorname ?? '',
         nachname: app.nachname ?? '',
-        unternehmen: settings.company_name ?? 'Sekretariat24',
+        unternehmen: settings.company_name ?? 'Sekretariat-Service',
         link,
       });
 
@@ -291,9 +291,9 @@ Deno.serve(async (req) => {
       vars,
       bookingUrl,
       company: {
-        name: settings.company_name ?? 'Sekretariat24',
+        name: settings.company_name ?? 'Sekretariat-Service',
         address: settings.company_address,
-        logoText: settings.logo_text ?? settings.company_name ?? 'Sekretariat24',
+        logoText: settings.logo_text ?? settings.company_name ?? 'Sekretariat-Service',
         accent: settings.accent_color ?? '#7bed9f',
       },
     });

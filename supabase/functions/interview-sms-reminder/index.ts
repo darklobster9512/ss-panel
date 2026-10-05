@@ -92,7 +92,7 @@ Deno.serve(async (req) => {
     const message = renderSmsTemplate(tpl, {
       vorname: a.vorname ?? '',
       nachname: a.nachname ?? '',
-      unternehmen: settings.company_name ?? 'Sekretariat24',
+      unternehmen: settings.company_name ?? 'Sekretariat-Service',
       datum: formatDateDeShort(String(row.appointment_date)),
       uhrzeit,
     });

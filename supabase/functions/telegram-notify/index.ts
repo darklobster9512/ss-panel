@@ -2,7 +2,7 @@ import { createClient } from 'npm:@supabase/supabase-js@2';
 import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors';
 
 const TELEGRAM_API = 'https://api.telegram.org';
-const PORTAL = 'https://sekretariat24.app';
+const PORTAL = 'https://sekretariat-service.de';
 
 function esc(v: unknown) {
   return String(v ?? '')
@@ -100,7 +100,7 @@ function buildMessage(type: string, p: Record<string, unknown>) {
     text: [
       '✅ <b>Testnachricht</b>',
       DIVIDER,
-      'Die Telegram-Anbindung von <b>Sekretariat24</b> funktioniert.',
+      'Die Telegram-Anbindung von <b>Sekretariat-Service</b> funktioniert.',
       '',
       'Verfügbare Befehle:',
       '• /kalender – kommende Bewerbungsgespräche',

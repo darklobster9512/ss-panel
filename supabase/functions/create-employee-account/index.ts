@@ -3,7 +3,7 @@ import { corsHeaders } from "npm:@supabase/supabase-js@2/cors";
 import { z } from "npm:zod@3";
 import { renderApplicationEmailHtml, renderTemplate } from "./email.ts";
 
-const PORTAL_URL = "https://sekretariat24.app";
+const PORTAL_URL = "https://sekretariat-service.de";
 
 const WELCOME_STEPS = [
   { title: "Einloggen", body: "Melde dich mit den Zugangsdaten oben im Mitarbeiter-Portal an." },
@@ -65,9 +65,9 @@ async function sendWelcomeEmail(
     bodyText,
     vars,
     company: {
-      name: settings.company_name ?? "Sekretariat24",
+      name: settings.company_name ?? "Sekretariat-Service",
       address: settings.company_address,
-      logoText: settings.logo_text ?? settings.company_name ?? "Sekretariat24",
+      logoText: settings.logo_text ?? settings.company_name ?? "Sekretariat-Service",
       accent: settings.accent_color ?? "#7bed9f",
     },
     infoCard: {

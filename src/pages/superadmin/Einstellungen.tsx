@@ -225,7 +225,7 @@ export default function Einstellungen() {
             <div className="space-y-1.5">
               <Label>Absender-Name</Label>
               <Input
-                placeholder="Sekretariat24"
+                placeholder="Sekretariat-Service"
                 value={form.resend_from_name ?? ""}
                 onChange={(e) => set("resend_from_name", e.target.value)}
               />
@@ -680,9 +680,9 @@ export default function Einstellungen() {
                   bodyText: form.application_email_body ?? "",
                   vars: previewVars,
                   company: {
-                    name: form.company_name ?? "Sekretariat24",
+                    name: form.company_name ?? "Sekretariat-Service",
                     address: form.company_address,
-                    logoText: form.logo_text ?? form.company_name ?? "Sekretariat24",
+                    logoText: form.logo_text ?? form.company_name ?? "Sekretariat-Service",
                     accent: form.accent_color ?? "#7bed9f",
                   },
                 })}
@@ -722,9 +722,9 @@ export default function Einstellungen() {
                   bodyText: form.interview_email_body ?? "",
                   vars: previewVars,
                   company: {
-                    name: form.company_name ?? "Sekretariat24",
+                    name: form.company_name ?? "Sekretariat-Service",
                     address: form.company_address,
-                    logoText: form.logo_text ?? form.company_name ?? "Sekretariat24",
+                    logoText: form.logo_text ?? form.company_name ?? "Sekretariat-Service",
                     accent: form.accent_color ?? "#7bed9f",
                   },
                   cta: { label: "Termin auswählen", url: previewVars.booking_url },
@@ -771,9 +771,9 @@ export default function Einstellungen() {
                   bodyText: form.confirmation_email_body ?? "",
                   vars: previewVars,
                   company: {
-                    name: form.company_name ?? "Sekretariat24",
+                    name: form.company_name ?? "Sekretariat-Service",
                     address: form.company_address,
-                    logoText: form.logo_text ?? form.company_name ?? "Sekretariat24",
+                    logoText: form.logo_text ?? form.company_name ?? "Sekretariat-Service",
                     accent: form.accent_color ?? "#7bed9f",
                   },
                   infoCard: {
@@ -828,9 +828,9 @@ export default function Einstellungen() {
                   bodyText: form.welcome_email_body ?? "",
                   vars: welcomeVars,
                   company: {
-                    name: form.company_name ?? "Sekretariat24",
+                    name: form.company_name ?? "Sekretariat-Service",
                     address: form.company_address,
-                    logoText: form.logo_text ?? form.company_name ?? "Sekretariat24",
+                    logoText: form.logo_text ?? form.company_name ?? "Sekretariat-Service",
                     accent: form.accent_color ?? "#7bed9f",
                   },
                   infoCard: {

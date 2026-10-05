@@ -10,7 +10,6 @@ import {
   Loader2,
   Globe,
   ArrowUpRight,
-  TriangleAlert,
 } from "lucide-react";
 import {
   supabase,

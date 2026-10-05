@@ -56,7 +56,6 @@ const mainItems: SidebarItem[] = [
   { title: "Übersicht", url: "/superadmin", icon: LayoutDashboard, end: true },
   { title: "Kunden", url: "/superadmin/kunden", icon: Building2 },
   { title: "Mitarbeiter", url: "/superadmin/mitarbeiter", icon: Users },
-  { title: "Arbeitszeiten", url: "/superadmin/arbeitszeiten", icon: Clock },
   { title: "Zuweisungen", url: "/superadmin/zuweisungen", icon: Link2 },
 ];
 

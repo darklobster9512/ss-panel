@@ -37,7 +37,6 @@ import SuperadminTelegram from "./pages/superadmin/Telegram";
 import SuperadminManager from "./pages/superadmin/Manager";
 import SuperadminLivechat from "./pages/superadmin/Livechat";
 import SuperadminArbeitsvertraege from "./pages/superadmin/Arbeitsvertraege";
-import SuperadminArbeitszeiten from "./pages/superadmin/Arbeitszeiten";
 
 import SuperadminArbeitsvertragDetail from "./pages/superadmin/ArbeitsvertragDetail";
 
@@ -56,7 +55,6 @@ import MitarbeiterStatistik from "./pages/mitarbeiter/Statistik";
 import MitarbeiterProfil from "./pages/mitarbeiter/Profil";
 import MitarbeiterArbeitsvertrag from "./pages/mitarbeiter/Arbeitsvertrag";
 import MitarbeiterOnboarding from "./pages/mitarbeiter/Onboarding";
-import MitarbeiterArbeitszeiten from "./pages/mitarbeiter/Arbeitszeiten";
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient({
@@ -95,7 +93,6 @@ export default function App() {
                     <Route path="mitarbeiter" element={<SuperadminMitarbeiter />} />
                     <Route path="mitarbeiter/anlegen" element={<SuperadminMitarbeiterWizard mode="create" />} />
                     <Route path="mitarbeiter/bearbeiten/:id" element={<SuperadminMitarbeiterWizard mode="edit" />} />
-                    <Route path="arbeitszeiten" element={<SuperadminArbeitszeiten />} />
                     <Route path="mitarbeiter/:id" element={<SuperadminMitarbeiterDetail />} />
                     <Route path="zuweisungen" element={<SuperadminZuweisungen />} />
                     <Route path="anrufe" element={<SuperadminAnrufe />} />
@@ -150,7 +147,6 @@ export default function App() {
                     <Route path="profil" element={<MitarbeiterProfil />} />
                     <Route path="arbeitsvertrag" element={<MitarbeiterArbeitsvertrag />} />
                     <Route path="onboarding" element={<MitarbeiterOnboarding />} />
-                    <Route path="arbeitszeiten" element={<MitarbeiterArbeitszeiten />} />
                   </Route>
                 </Route>
 

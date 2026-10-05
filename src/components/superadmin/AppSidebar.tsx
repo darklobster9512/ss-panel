@@ -11,8 +11,6 @@ import {
   PhoneOutgoing,
   StickyNote,
   FileSignature,
-  Wallet,
-  Receipt,
   Settings,
   Headphones,
   UserPlus,

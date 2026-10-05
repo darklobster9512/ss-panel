@@ -70,7 +70,7 @@ function BrandingPanel() {
 
       <div className="relative">
         <Link to="/" className="inline-flex items-center gap-2 text-on-ink">
-          <img src="/sekretariat-service-logo.png" alt="Sekretariat-Service" className="h-9 w-9 rounded-xl" />
+          <img src="/logo-icon.png" alt="Sekretariat-Service" className="h-9 w-9 rounded-xl" />
           <span className="text-lg font-semibold tracking-tight">
             Sekretariat<span className="text-primary">-Service</span>
           </span>

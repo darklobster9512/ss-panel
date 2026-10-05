@@ -136,7 +136,7 @@ export function MitarbeiterSidebar() {
         <div className={cn("flex items-center py-3", collapsed ? "justify-center px-0" : "gap-2.5 px-2")}>
           <div className={cn("flex shrink-0 items-center justify-center", collapsed ? "h-7 w-7" : "h-9 w-9")}>
             <img
-              src="/sekretariat-service-logo.png"
+              src="/logo-icon.png"
               alt="Sekretariat-Service"
               className="block h-full w-full object-contain"
             />

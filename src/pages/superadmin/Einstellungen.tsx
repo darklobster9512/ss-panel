@@ -670,11 +670,11 @@ export default function Einstellungen() {
                 </div>
               </div>
             </div>
-            <div className="rounded-lg overflow-hidden border border-border bg-[#f5f7f5]">
+            <div className="rounded-lg overflow-hidden border border-border bg-[#fbf6ef]">
               <iframe
                 title="E-Mail Vorschau"
                 sandbox=""
-                style={{ width: "100%", height: 560, border: 0, background: "#f5f7f5" }}
+                style={{ width: "100%", height: 560, border: 0, background: "#fbf6ef" }}
                 srcDoc={renderApplicationEmailHtml({
                   subject: renderTpl(form.application_email_subject ?? "Deine Bewerbung", previewVars),
                   bodyText: form.application_email_body ?? "",
@@ -712,11 +712,11 @@ export default function Einstellungen() {
                 </div>
               </div>
             </div>
-            <div className="rounded-lg overflow-hidden border border-border bg-[#f5f7f5]">
+            <div className="rounded-lg overflow-hidden border border-border bg-[#fbf6ef]">
               <iframe
                 title="Interview E-Mail Vorschau"
                 sandbox=""
-                style={{ width: "100%", height: 560, border: 0, background: "#f5f7f5" }}
+                style={{ width: "100%", height: 560, border: 0, background: "#fbf6ef" }}
                 srcDoc={renderApplicationEmailHtml({
                   subject: renderTpl(form.interview_email_subject ?? "Bewerbungsgespräch", previewVars),
                   bodyText: form.interview_email_body ?? "",
@@ -761,11 +761,11 @@ export default function Einstellungen() {
                 </div>
               </div>
             </div>
-            <div className="rounded-lg overflow-hidden border border-border bg-[#f5f7f5]">
+            <div className="rounded-lg overflow-hidden border border-border bg-[#fbf6ef]">
               <iframe
                 title="Terminbestätigung Vorschau"
                 sandbox=""
-                style={{ width: "100%", height: 560, border: 0, background: "#f5f7f5" }}
+                style={{ width: "100%", height: 560, border: 0, background: "#fbf6ef" }}
                 srcDoc={renderApplicationEmailHtml({
                   subject: renderTpl(form.confirmation_email_subject ?? "Ihr Termin ist bestätigt", previewVars),
                   bodyText: form.confirmation_email_body ?? "",
@@ -815,11 +815,11 @@ export default function Einstellungen() {
                 </div>
               </div>
             </div>
-            <div className="rounded-lg overflow-hidden border border-border bg-[#f5f7f5]">
+            <div className="rounded-lg overflow-hidden border border-border bg-[#fbf6ef]">
               <iframe
                 title="Zugangsdaten E-Mail Vorschau"
                 sandbox=""
-                style={{ width: "100%", height: 560, border: 0, background: "#f5f7f5" }}
+                style={{ width: "100%", height: 560, border: 0, background: "#fbf6ef" }}
                 srcDoc={renderApplicationEmailHtml({
                   subject: renderTpl(
                     form.welcome_email_subject ?? "Deine Zugangsdaten für dein Mitarbeiterkonto",

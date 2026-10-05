@@ -23,7 +23,7 @@ const STATUS_META: Record<Status, { label: string; dot: string; ring: string }> 
   "verfuegbar": { label: "Verfügbar", dot: "bg-primary", ring: "ring-primary/40" },
   "pause": { label: "Pause", dot: "bg-amber-400", ring: "ring-amber-400/40" },
   "nicht-bereit": { label: "Nicht bereit", dot: "bg-destructive", ring: "ring-destructive/40" },
-  "im-gespraech": { label: "Im Gespräch", dot: "bg-sky-400 animate-pulse", ring: "ring-sky-400/40" },
+  "im-gespraech": { label: "Im Gespräch", dot: "bg-primary animate-pulse", ring: "ring-primary/40" },
 };
 
 const MANUAL_STATUSES: Status[] = ["verfuegbar", "pause", "nicht-bereit"];

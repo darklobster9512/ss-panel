@@ -24,7 +24,7 @@ const STATUS_LABELS: Record<Row["status"], string> = {
 const STATUS_VARIANTS: Record<Row["status"], string> = {
   pending_employee: "bg-amber-500/10 text-amber-600 border-amber-500/30",
   pending_admin: "bg-primary/15 text-ink-deep border-primary/40",
-  completed: "bg-emerald-500/10 text-emerald-700 border-emerald-500/30 dark:text-emerald-400",
+  completed: "bg-primary/10 text-primary border-primary/30",
 };
 
 export default function Arbeitsvertraege() {

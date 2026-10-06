@@ -110,7 +110,7 @@ export default function Einstellungen() {
     datum: "12. August 2026",
     uhrzeit: "14:30",
     wochentag: "Mittwoch",
-    booking_url: `${typeof window !== "undefined" ? window.location.origin : ""}/bewerbungsgespraech/beispiel-token`,
+    booking_url: "https://portal.sekretariat-service.de/bewerbungsgespraech/beispiel-token",
   };
 
   const welcomeVars = {
@@ -119,7 +119,7 @@ export default function Einstellungen() {
     voller_name: "Max Mustermann",
     login_email: "m.mustermann@sekretariat-service.de",
     passwort: "Bx7-tR29-qLm4",
-    portal_url: "https://sekretariat-service.de",
+    portal_url: "https://portal.sekretariat-service.de",
   };
 
 

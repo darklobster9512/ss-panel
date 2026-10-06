@@ -207,7 +207,7 @@ Deno.serve(async (req) => {
       .limit(1)
       .maybeSingle();
 
-    const bookingUrl = `https://sekretariat-service.de/bewerbungsgespraech/${token}`;
+    const bookingUrl = `https://portal.sekretariat-service.de/bewerbungsgespraech/${token}`;
 
     // --- SMS via seven.io (independent of the email) ---
     async function trySendSms(): Promise<{ ok: boolean; skipped?: string; error?: string }> {
@@ -225,7 +225,7 @@ Deno.serve(async (req) => {
           break;
         }
       }
-      const link = targetOk ? `https://sekretariat-service.de/r/${code}` : bookingUrl;
+      const link = targetOk ? `https://portal.sekretariat-service.de/r/${code}` : bookingUrl;
 
       const tpl =
         settings.sms_interview_text ??

@@ -26,11 +26,6 @@ function textToParagraphs(text: string) {
     .map((b) => `<p style="margin:0 0 24px 0;font-size:15px;line-height:1.75;color:#2e2620;">${b}</p>`)
     .join('');
 }
-function splitLogo(logoText: string) {
-  const m = logoText.match(/^(.*?)(\d+)$/);
-  return m ? { head: m[1], tail: m[2] } : { head: logoText, tail: '' };
-}
-
 const CONFIRMATION_STEPS = [
   { title: 'Termin notieren', body: 'Tragen Sie sich den Termin am besten direkt in Ihren Kalender ein.' },
   { title: 'Kurzes Kennenlerngespräch', body: 'Wir sprechen ca. 20–30 Minuten über Ihre Erfahrung und offene Fragen.' },
@@ -53,7 +48,6 @@ function renderConfirmationEmailHtml(input: ConfirmationInput) {
   const accentBorder = '#e9c8b8';
   const paragraphs = textToParagraphs(renderTemplate(input.bodyText, input.vars));
   const logoText = input.company.logoText || input.company.name || 'Sekretariat-Service';
-  const { head, tail } = splitLogo(logoText);
   const companyName = escapeHtml(input.company.name || logoText);
   const address = input.company.address ? escapeHtml(input.company.address).replace(/\n/g, ' · ') : '';
   const preheader = escapeHtml(input.subject).slice(0, 140);

@@ -68,7 +68,7 @@ async function sendWelcomeEmail(
       name: settings.company_name ?? "Sekretariat-Service",
       address: settings.company_address,
       logoText: settings.logo_text ?? settings.company_name ?? "Sekretariat-Service",
-      accent: settings.accent_color ?? "#7bed9f",
+      accent: settings.accent_color ?? "#c4634a",
     },
     infoCard: {
       label: "Deine Zugangsdaten",

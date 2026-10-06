@@ -56,12 +56,6 @@ function textToParagraphs(text: string) {
     .join("");
 }
 
-function splitLogo(logoText: string) {
-  const m = logoText.match(/^(.*?)(\d+)$/);
-  if (m) return { head: m[1], tail: m[2] };
-  return { head: logoText, tail: "" };
-}
-
 export function renderApplicationEmailHtml(input: ApplicationEmailInput) {
   const accent = input.company.accent || "#c4634a";
   const accentDark = "#a3503c";
@@ -72,7 +66,6 @@ export function renderApplicationEmailHtml(input: ApplicationEmailInput) {
   const bodyRendered = renderTemplate(input.bodyText, input.vars);
   const paragraphs = textToParagraphs(bodyRendered);
   const logoText = input.company.logoText || input.company.name || "Sekretariat-Service";
-  const { head, tail } = splitLogo(logoText);
   const companyName = escapeHtml(input.company.name || logoText);
   const address = input.company.address
     ? escapeHtml(input.company.address).replace(/\n/g, " · ")

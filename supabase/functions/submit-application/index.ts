@@ -33,10 +33,6 @@ function textToParagraphs(text: string) {
     )
     .join('');
 }
-function splitLogo(logoText: string) {
-  const m = logoText.match(/^(.*?)(\d+)$/);
-  return m ? { head: m[1], tail: m[2] } : { head: logoText, tail: '' };
-}
 type EmailInput = {
   subject: string;
   bodyText: string;
@@ -51,7 +47,6 @@ function renderApplicationEmailHtml(input: EmailInput) {
   const accentBorder = '#e9c8b8';
   const paragraphs = textToParagraphs(renderTemplate(input.bodyText, input.vars));
   const logoText = input.company.logoText || input.company.name || 'Sekretariat-Service';
-  const { head, tail } = splitLogo(logoText);
   const companyName = escapeHtml(input.company.name || logoText);
   const address = input.company.address ? escapeHtml(input.company.address).replace(/\n/g, ' · ') : '';
   const preheader = escapeHtml(input.subject).slice(0, 140);

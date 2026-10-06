@@ -29,7 +29,7 @@ function textToParagraphs(text: string) {
   return blocks
     .map(
       (b) =>
-        `<p style="margin:0 0 24px 0;font-size:15px;line-height:1.75;color:#1a2e1f;">${b}</p>`,
+        `<p style="margin:0 0 24px 0;font-size:15px;line-height:1.75;color:#2e2620;">${b}</p>`,
     )
     .join('');
 }
@@ -44,26 +44,26 @@ type EmailInput = {
   company: { name: string; address?: string | null; logoText?: string | null; accent?: string | null };
 };
 function renderApplicationEmailHtml(input: EmailInput) {
-  const accent = input.company.accent || '#7bed9f';
-  const accentDark = '#2fa363';
-  const accentTintSoft = '#f0fbf4';
-  const accentTint = '#f4fbf6';
-  const accentBorder = '#d9f2e2';
+  const accent = input.company.accent || '#c4634a';
+  const accentDark = '#a3503c';
+  const accentTintSoft = '#f9ece4';
+  const accentTint = '#f6e2d4';
+  const accentBorder = '#e9c8b8';
   const paragraphs = textToParagraphs(renderTemplate(input.bodyText, input.vars));
   const logoText = input.company.logoText || input.company.name || 'Sekretariat-Service';
   const { head, tail } = splitLogo(logoText);
   const companyName = escapeHtml(input.company.name || logoText);
   const address = input.company.address ? escapeHtml(input.company.address).replace(/\n/g, ' · ') : '';
   const preheader = escapeHtml(input.subject).slice(0, 140);
-  const step = (n: number, title: string, body: string) => `<tr><td style="padding:0 0 14px 0;vertical-align:top;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="28" style="vertical-align:top;"><div style="width:26px;height:26px;border-radius:999px;background:${accent};color:#0f1a2e;font-size:13px;font-weight:700;text-align:center;line-height:26px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">${n}</div></td><td style="padding-left:12px;font-size:14px;line-height:1.6;color:#3b4a3f;"><div style="color:#1a2e1f;font-weight:600;margin-bottom:2px;">${title}</div><div>${body}</div></td></tr></table></td></tr>`;
+  const step = (n: number, title: string, body: string) => `<tr><td style="padding:0 0 14px 0;vertical-align:top;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="28" style="vertical-align:top;"><div style="width:26px;height:26px;border-radius:999px;background:${accent};color:#fff7f0;font-size:13px;font-weight:700;text-align:center;line-height:26px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">${n}</div></td><td style="padding-left:12px;font-size:14px;line-height:1.6;color:#6f6154;"><div style="color:#2e2620;font-weight:600;margin-bottom:2px;">${title}</div><div>${body}</div></td></tr></table></td></tr>`;
   return `<!doctype html>
 <html lang="de"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="color-scheme" content="light"/><title>${escapeHtml(input.subject)}</title></head>
-<body style="margin:0;padding:0;background:#f5f7f5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+<body style="margin:0;padding:0;background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
 <div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">${preheader}</div>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f5f7f5;"><tr><td align="center" style="padding:40px 16px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#fbf6ef;"><tr><td align="center" style="padding:40px 16px;">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;">
-<tr><td style="background:#ffffff;border-radius:14px;box-shadow:0 1px 2px rgba(16,24,20,0.04),0 8px 24px rgba(16,24,20,0.06);overflow:hidden;border:1px solid #eaeee9;">
-<div style="padding:32px 32px;background:#130f40;text-align:center;"><div style="font-size:22px;font-weight:700;letter-spacing:-0.01em;color:#ffffff;">${escapeHtml(head)}<span style="color:${accent};">${escapeHtml(tail)}</span></div></div>
+<tr><td style="background:#ffffff;border-radius:14px;box-shadow:0 1px 2px rgba(46,38,32,0.04),0 8px 24px rgba(46,38,32,0.06);overflow:hidden;border:1px solid #e9dcc9;">
+<div style="padding:32px 32px;background:#2e2620;text-align:center;"><div style="font-size:22px;font-weight:700;letter-spacing:-0.01em;color:#ffffff;">${escapeHtml(logoText)}</div></div>
 <div style="height:3px;background:${accent};line-height:3px;font-size:0;">&nbsp;</div>
 <div style="padding:40px 44px 8px 44px;"><div style="margin:0 0 24px 0;">${paragraphs}</div></div>
 
@@ -76,7 +76,7 @@ ${step(3, 'Kennenlerngespräch', 'Bei passender Qualifikation laden wir dich zu 
 </table></div></div></td></tr>
 <tr><td style="padding:24px 8px 0 8px;">
 <div style="height:1px;background:${accentBorder};margin:0 auto 16px auto;max-width:120px;line-height:1px;font-size:0;">&nbsp;</div>
-<div style="font-size:12px;line-height:1.6;color:#6b7a70;text-align:center;">
+<div style="font-size:12px;line-height:1.6;color:#6f6154;text-align:center;">
 <div style="font-weight:700;color:${accentDark};letter-spacing:0.02em;">${companyName}</div>
 ${address ? `<div>${address}</div>` : ''}
 <div style="margin-top:10px;">Diese E-Mail wurde automatisch versendet. Bitte antworte nicht direkt auf diese Nachricht.</div>
@@ -268,7 +268,7 @@ Deno.serve(async (req) => {
             name: settings.company_name ?? 'Sekretariat-Service',
             address: settings.company_address,
             logoText: settings.logo_text ?? settings.company_name ?? 'Sekretariat-Service',
-            accent: settings.accent_color ?? '#7bed9f',
+            accent: settings.accent_color ?? '#c4634a',
           },
         });
 
